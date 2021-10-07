@@ -1,21 +1,10 @@
 # -*- coding: utf-8 -*-
 import pandas as pd
 import matplotlib.pyplot as plt
-import platform
 import streamlit as st
 from matplotlib import font_manager, rc
 base = "assets\\"
 def app():
-    plt.rcParams['axes.unicode_minus'] = False
-
-    if platform.system() == 'Darwin':
-        rc('font', family='AppleGothic')
-    elif platform.system() == 'Windows':
-        path = "c:/Windows/Fonts/malgun.ttf"
-        font_name = font_manager.FontProperties(fname=path).get_name()
-        rc('font', family=font_name)
-    else:
-        print('Unknown system... sorry~~~~')
 
     st.write(
         """# 지하철 유무임별 이용현황 데이터 분석
