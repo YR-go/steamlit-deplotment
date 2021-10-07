@@ -6,7 +6,6 @@ matplotlib
 seaborn
 sklearn
 nltk
-string
 wordcloud
 fbprophet
 platform
