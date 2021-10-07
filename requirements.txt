@@ -1,9 +1,7 @@
 Streamlit == 0.88.0
 pandas
 numpy
-tensorflow
 matplotlib
 seaborn
 sklearn
-nltk
 wordcloud
