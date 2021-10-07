@@ -1,7 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import streamlit as st
-base = 'assets\\'
+base = 'assets/'
 
 def app():
   st.title("영화 추천 시스템")
