@@ -19,4 +19,4 @@ sklearn.naive_bayes
 wordcloud
 fbprophet
 string
-import platform
+platform
