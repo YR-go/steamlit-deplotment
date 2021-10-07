@@ -2,20 +2,10 @@
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
-import platform
-from matplotlib import font_manager, rc
 plt.rcParams['axes.unicode_minus'] = False
 base = 'assets\\'
 
 def app():
-    if platform.system() == 'Darwin':
-        rc('font', family='AppleGothic')
-    elif platform.system() == 'Windows':
-        path = "c:/Windows/Fonts/malgun.ttf"
-        font_name = font_manager.FontProperties(fname=path).get_name()
-        rc('font', family=font_name)
-    else:
-        print('Unknown system... sorry~~~~')
 
     st.write("# 인구데이터 분석")
     st.write('https://mois.go.kr에서, 연령별 인구현황 통계표를 csv로 다운로드 한다. (남녀구문을 uncheck, 연령1세단위, 0~100, 전체읍면동현황)')
