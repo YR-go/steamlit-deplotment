@@ -1,7 +1,5 @@
 import streamlit as st
-from apps.analapp import 기온데이터분석,대중교통,인구조사,amazon_reviews_analysis,spam_classifier_using_naive_bayes\
-    ,yelp_reviews_classification,movie_recommender_system,avocado_prices_prediction,lstm_주가예측_시스템
-
+from apps.analapp import 기온데이터분석,대중교통,인구조사,amazon_reviews_analysis,movie_recommender_system
 
 def app():
     cola, colb = st.columns([2,1])
@@ -23,21 +21,10 @@ def app():
     p4 = st.button('4. Amazon 리뷰 분석')
     if p4:
         amazon_reviews_analysis.app()
-    p5 = st.button('5. 스팸 분류 모델')
-    if p5:
-        spam_classifier_using_naive_bayes.app()
-    p6 = st.button("6. Yelp 리뷰 분석")
-    if p6:
-        yelp_reviews_classification.app()
-    p7 = st.button('7. 영화 추천 시스템')
-    if p7:
+    p5 = st.button("5. 영화 추천 시스템")
+    if p5 :
         movie_recommender_system.app()
-    p8 = st.button("8. 아보카도 가격 예측")
-    if p8:
-        avocado_prices_prediction.app()
-    p9 = st.button("9. lstm_주가예측_시스템")
-    if p9:
-        lstm_주가예측_시스템.app()
+
 
 
 
