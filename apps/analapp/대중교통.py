@@ -4,6 +4,24 @@ import matplotlib.pyplot as plt
 import streamlit as st
 from matplotlib import font_manager, rc
 base = "assets/"
+
+# 그래프에서 한글을 출력하기위한 설정
+# 한글 폰트 추가
+from matplotlib import font_manager
+font_dirs = ['/usr/share/fonts/truetype/nanum']
+font_files = font_manager.findSystemFonts(fontpaths=font_dirs)
+for font_file in font_files:
+    font_manager.fontManager.addfont(font_file)
+
+# 한글 폰트 설정
+import matplotlib.pyplot as plt
+plt.rcParams['font.family'] = 'NanumBarunGothic'
+plt.rc('font', family='NanumBarunGothic')
+
+# 한글 폰트 확인
+from matplotlib.font_manager import findfont
+findfont('NanumBarunGothic')
+
 def app():
 
     st.write(
@@ -63,11 +81,13 @@ def app():
 
     seoul = df.iloc[0, 4:7+1]
 
-    fig, ax = plt.subplots()
-    ax.pie(seoul, labels = seoul.index, autopct='%.1f')
-    plt.title(df['지하철역'][0])
+    col1, coll1 = st.columns([4,6])
+    with col1:
+        fig, ax = plt.subplots()
+        ax.pie(seoul, labels = seoul.index, autopct='%.1f')
+        plt.title(df['지하철역'][0])
 
-    st.pyplot(fig)
+        st.pyplot(fig)
 
 
 
