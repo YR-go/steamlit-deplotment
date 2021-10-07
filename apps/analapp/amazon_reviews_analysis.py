@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt # Import matplotlib for data visualisation
 import seaborn as sb # Statistical data visualization
 from wordcloud import WordCloud
 from sklearn.feature_extraction.text import CountVectorizer
-base = 'assets\\'
+base = 'assets/'
 
 def app():
   st.write("# Amazon 리뷰 분석")
