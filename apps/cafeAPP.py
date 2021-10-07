@@ -23,9 +23,9 @@ def app():
     st.markdown('## ◆ Part : Web, DB')
     st.markdown("")
     st.subheader("1. [Web] ▶ https://cafe-f6a97.web.app/")
-    st.image('assets\pos.JPG', width=500, caption='Web Page')
+    st.image('assets/pos.JPG', width=500, caption='Web Page')
     st.markdown("")
 
     st.subheader('2. [DB] (Google Firebase)')
-    st.image('assets\dbsize.JPG', width=500)
-    st.image('assets\posrecordsize.png', width=400)
+    st.image('assets/dbsize.JPG', width=500)
+    st.image('assets/posrecordsize.png', width=400)
