@@ -4,11 +4,9 @@ numpy
 tensorflow
 matplotlib
 seaborn
-
 sklearn
 nltk
 string
 wordcloud
 fbprophet
-string
 platform
