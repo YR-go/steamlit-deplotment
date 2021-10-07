@@ -3,7 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import streamlit as st
 from matplotlib import font_manager, rc
-base = "assets\\"
+base = "assets/"
 def app():
 
     st.write(
