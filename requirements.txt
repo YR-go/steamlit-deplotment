@@ -1,0 +1,39 @@
+Streamlit == 0.88.0
+pandas
+numpy
+import numpy as np
+import pandas as pd
+import tensorflow as tf
+import matplotlib.pyplot as plt
+import seaborn as sns
+import FinanceDataReader as fdr
+import streamlit as st
+from sklearn.preprocessing import MinMaxScaler
+from sklearn.model_selection import train_test_split
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense, LSTM, Conv1D, Lambda
+from tensorflow.keras.losses import Huber
+from tensorflow.keras.optimizers import Adam
+
+from nltk.corpus import stopwords
+import string
+from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import confusion_matrix
+from sklearn.naive_bayes import MultinomialNB
+from wordcloud import WordCloud, STOPWORDS
+
+from wordcloud import WordCloud
+from sklearn.feature_extraction.text import CountVectorizer
+from fbprophet import Prophet
+
+import string
+import matplotlib.pyplot as plt
+import seaborn as sns
+from nltk.corpus import stopwords
+from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.naive_bayes import MultinomialNB
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import confusion_matrix
+
+import platform
