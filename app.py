@@ -1,5 +1,5 @@
 import streamlit as st
-from multiapp import MultiApp
+import MultiApp
 from apps import home, data_stats, parkingLot, cafeAPP
 
 app = MultiApp()
