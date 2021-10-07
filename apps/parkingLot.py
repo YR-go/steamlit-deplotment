@@ -6,7 +6,7 @@ def app():
     st.title('AI Parking Lot System')
     st.subheader('team project')
 
-    st.image('assets\\res.png', width=240, caption='Parking Lot\'s status in App')
+    st.image('assets/res.png', width=240, caption='Parking Lot\'s status in App')
 
 
     st.markdown('')
@@ -16,10 +16,10 @@ def app():
     st.subheader('1. [Image processing]')
     st.write('OpenCV를 활용, 주차구역을 이미지 좌표를 받아 Crop 한다')
     st.markdown('### о 판별할 주차장 영상')
-    st.image('assets\image05.png')
+    st.image('assets/image05.png')
     st.markdown('')
     st.markdown('### о 좌표값 설정')
-    st.image('assets\image04.png')
+    st.image('assets/image04.png')
 
     st.markdown('')
 
@@ -30,9 +30,9 @@ def app():
     st.markdown('### о 판별된 주차장 구역')
     col1, col2 = st.columns(2)
     with col1:
-        st.image('assets\캡처3.JPG', caption='주차된 경우')
+        st.image('assets/캡처3.JPG', caption='주차된 경우')
     with col2:
-        st.image('assets\캡처.JPG', caption='비어있는 경우')
+        st.image('assets/캡처.JPG', caption='비어있는 경우')
 
     st.markdown('')
     st.markdown('### о 예측결과 출력')
