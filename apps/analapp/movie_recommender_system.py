@@ -73,7 +73,7 @@ def app():
   '''
   st.code(code3, 'python')
   st.code("st.write(), st.dataframe() 에서 모두 value error가 발생한다.")
-  st.image(base+"valueerror.jpg",width=500, use_column_width=[1,2,1])
+  st.image(base+"valueerror.JPG",width=500, use_column_width=[1,2,1])
 
   ratings_mean_count_df =  pd.concat([ratings_df_count,ratings_df_mean], axis=1)
 
