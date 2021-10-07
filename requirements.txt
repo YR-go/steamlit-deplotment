@@ -4,7 +4,7 @@ numpy
 tensorflow
 matplotlib
 seaborn
-FinanceDataReader
+
 sklearn
 nltk
 string
