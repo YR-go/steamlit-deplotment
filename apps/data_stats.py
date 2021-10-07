@@ -9,7 +9,7 @@ def app():
         end = st.button('프로젝트 접기')
 
 
-    p1 = st.button('1. 프로젝트_기온데이터분석')
+    p1 = st.button('1. 기온데이터분석')
     if p1 :
         기온데이터분석.app()
     p2 = st.button("2. 대중교통 이용정보분석")
