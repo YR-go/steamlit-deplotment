@@ -4,7 +4,7 @@ def app():
     st.title('Project Pages')
     st.markdown("### Please Check Projects on the side")
 
-    st.image('assets\myimg.png', width=300)
+    st.image('assets/myimg.png', width=300)
     st.markdown('# 신예림')
     st.markdown("## Big Data/ Data Analysis/ ML")
 
