@@ -27,5 +27,5 @@ def app():
     st.markdown("")
 
     st.subheader('2. [DB] (Google Firebase)')
-    st.image('assets/dbsize.JPG', width=500)
+    st.image('assets/dbsize.jpg', width=500)
     st.image('assets/posrecordsize.png', width=400)
