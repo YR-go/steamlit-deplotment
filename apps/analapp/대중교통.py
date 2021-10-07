@@ -4,23 +4,19 @@ import matplotlib.pyplot as plt
 import streamlit as st
 from matplotlib import font_manager, rc
 base = "assets/"
+import platform
 
-# 그래프에서 한글을 출력하기위한 설정
-# 한글 폰트 추가
-from matplotlib import font_manager
-font_dirs = ['/usr/share/fonts/truetype/nanum']
-font_files = font_manager.findSystemFonts(fontpaths=font_dirs)
-for font_file in font_files:
-    font_manager.fontManager.addfont(font_file)
+from matplotlib import font_manager, rc
+plt.rcParams['axes.unicode_minus'] = False
 
-# 한글 폰트 설정
-import matplotlib.pyplot as plt
-plt.rcParams['font.family'] = 'NanumBarunGothic'
-plt.rc('font', family='NanumBarunGothic')
-
-# 한글 폰트 확인
-from matplotlib.font_manager import findfont
-findfont('NanumBarunGothic')
+if platform.system() == 'Darwin':
+    rc('font', family='AppleGothic')
+elif platform.system() == 'Windows':
+    path = "c:/Windows/Fonts/malgun.ttf"
+    font_name = font_manager.FontProperties(fname=path).get_name()
+    rc('font', family=font_name)
+else:
+    print('Unknown system... sorry~~~~')
 
 def app():
 
@@ -81,7 +77,7 @@ def app():
 
     seoul = df.iloc[0, 4:7+1]
 
-    col1, coll1 = st.columns([4,6])
+    col1, coll1 = st.columns([6,4])
     with col1:
         fig, ax = plt.subplots()
         ax.pie(seoul, labels = seoul.index, autopct='%.1f')
