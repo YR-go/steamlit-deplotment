@@ -4,7 +4,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from matplotlib import font_manager, rc
 import numpy as np
-base = 'assets\\'
+base = 'assets/'
 
 def app():
     st.write(
