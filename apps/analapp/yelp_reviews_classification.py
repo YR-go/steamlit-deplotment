@@ -4,7 +4,6 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import streamlit as st
 from nltk.corpus import stopwords
-import string
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import confusion_matrix  # 분류문제만 metrics 쓰는거임
@@ -104,15 +103,17 @@ def app():
            "2. 불용어 처리")
 
   code3 = '''
+    stringPunctuation = \'!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~\'
     def message_cleaning (sentense) :
-      punc_removed = [ char for char in sentense if char not in string.punctuation ]
+      punc_removed = [ char for char in sentense if char not in stringPunctuation ]
       punc_removed_join = ''.join(punc_removed)
       punc_removed_join_clean = [ word for word in punc_removed_join.split() if word.lower() not in stopwords.words('english')]
       return punc_removed_join_clean  # 문자열 리스트 리턴
     '''
+  stringPunctuation ='''!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~)'''
 
   def message_cleaning(sentense):
-    punc_removed = [char for char in sentense if char not in string.punctuation]
+    punc_removed = [char for char in sentense if char not in stringPunctuation]
     punc_removed_join = ''.join(punc_removed)
     punc_removed_join_clean = [word for word in punc_removed_join.split() if
                                word.lower() not in stopwords.words('english')]
